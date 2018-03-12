@@ -61,7 +61,11 @@ class Calculator {
 
   // return number
   equal() {
-    return this.number;
+    if (typeof(this.number) === typeof(Number(this.number))) {
+      return this.number.toFixed(2);
+    } else {
+      return this.number;
+    }
   }
 }
 
