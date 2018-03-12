@@ -3,20 +3,75 @@
 class Calculator {
   //write your code here
   constructor () {
+    this.firstNum = 0;
   }
-  add () {
+  add (num) {
+    if (!num) {
+      this.firstNum += this.firstNum;
+      return this;
+    } else {
+      this.firstNum += Number(num);
+      return this;
+    }
   }
-  substract () {
+
+  substract (num) {
+    if (!num) {
+      this.firstNum -= this.firstNum;
+      return this;
+    } else {
+      this.firstNum -= Number(num);
+      return this;
+    }
   }
-  multiply () {
+
+  multiply (num) {
+    if (!num) {
+      this.firstNum *= this.firstNum;
+      return this;
+    } else {
+      this.firstNum *= Number(num);
+      return this;
+    }
   }
-  divide () {
+
+  divide (num) {
+    if (!num) {
+      this.firstNum /= this.firstNum;
+      return this;
+    } else {
+      this.firstNum /= Number(num);
+      return this;
+    }
   }
-  square () {
+
+  square (num) {
+    if (!num) {
+      this.firstNum = Math.pow(this.firstNum,this.firstNum);
+      return this;
+    } else {
+      this.firstNum = Math.pow(this.firstNum,Number(num));
+      return this;
+    }
   }
+
   squareRoot () {
+    this.firstNum = Math.sqrt(this.firstNum);
+    return this;
   }
+
+  phi() {
+    return Math.PI;
+  }
+
+  result() {
+    return this.firstNum;
+  }
+
 }
+
+var calc = new Calculator();
+console.log(calc.add(2).add().substract(1).multiply(2).divide(3).square(2).squareRoot().result());
 
 /** note : you can use several features from ecmascript, such as:
 * - Classes
