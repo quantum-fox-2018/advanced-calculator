@@ -34,21 +34,13 @@ class Calculator {
   }
   squareRoot (power) {
 
-    if(power>1){
-      for(let i=1;i<=this.operand1;i++){
-        if(i*i == this.operand1){
-          this.result = i;
-          this.operand1 = this.result;
-          return this.squareRoot(power-1)
-        }
-      }
-      this.result = Math.sqrt(this.operand1);
-      return this.result;
-    }
-    else{
-      return this;
-    }
+    this.result = Math.pow(this.operand1,power);
+    return this;
+  }
 
+  phi(){
+    this.result = this.result * (3.14);
+    return this;
   }
 
   printResult(){
