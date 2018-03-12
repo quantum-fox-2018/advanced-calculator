@@ -2,19 +2,33 @@
 
 class Calculator {
   //write your code here
-  constructor () {
+  constructor (value) {
+    this.value = value
+    return this
   }
-  add () {
+  add (value) {
+    this.value = this.value + value
+    return this
   }
-  substract () {
+  substract (value) {
+    this.value = this.value - value
+    return this
   }
-  multiply () {
+  multiply (value) {
+    this.value = this.value * value
+    return this
   }
-  divide () {
+  divide (value) {
+    this.value = this.value / value
+    return this
   }
-  square () {
+  square (value) {
+    this.value = Math.pow(this.value, value)
+    return this
   }
   squareRoot () {
+    this.value = Math.pow(this.value, 0.5)
+    return this
   }
 }
 
