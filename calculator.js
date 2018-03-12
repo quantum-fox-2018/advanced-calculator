@@ -11,61 +11,59 @@ class Calculator {
     return this;
   }
 
-  add(num) {
-    this.number += num;
+  add(addNum) {
+    this.number += addNum;
     return this;
   }
 
-  substract(num) {
-    this.number -= num;
+  substract(substractNum) {
+    this.number -= substractNum;
     return this;
   }
 
-  multiply(num) {
-    this.number *= num;
+  multiply(multiplyNum) {
+    this.number *= multiplyNum;
     return this;
   }
 
-  divide(num) {
-    this.number /= num;
+  divide(divideNum) {
+    this.number /= divideNum;
     return this;
   }
 
-  square(num) {
-    this.number = Math.pow(this.number, num)
+  square(squareNum) {
+    this.number = Math.pow(this.number, squareNum)
     return this;
   }
 
-  squareRoot(num) {
-    this.number = Math.sqrt(num);
+  squareRoot() {
+    this.number = Math.sqrt(this.number);
     return this;
   }
 
-  wideCircle(num) {
-    if (num % 7 === 0) {
-      this.number = (22 / 7) * num * num;
+  wideCircle() {
+    if (this.number % 7 === 0) {
+      this.number = (22 / 7) * this.number * this.number;
     } else {
-      this.number = 3.14 * num * num;
+      this.number = 3.14 * this.number * this.number;
     }
+
     return this;
   }
 
-  circumference(num) {
-    if (num % 7 === 0) {
-      this.number = 2 * (22 / 7) * num;
+  circumference() {
+    if (this.number % 7 === 0) {
+      this.number = 2 * (22 / 7) * this.number;
     } else {
-      this.number = 2 * 3.14 * num;
+      this.number = 2 * 3.14 * this.number;
     }
+
     return this;
   }
 
   // return number
   equal() {
-    if (typeof(this.number) === typeof(Number(this.number))) {
-      return this.number.toFixed(2);
-    } else {
-      return this.number;
-    }
+    return this.number;
   }
 }
 

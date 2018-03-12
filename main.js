@@ -6,3 +6,5 @@ const {Calculator} = require("./calculator.js")
 var calculator = new Calculator();
 
 console.log(calculator.initNumber(10).divide(3).equal());
+
+console.log(calculator.initNumber(2).square(3).equal());
