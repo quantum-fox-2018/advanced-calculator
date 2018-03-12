@@ -1,20 +1,39 @@
 'use strict'
 
 class Calculator {
-  //write your code here
-  constructor () {
+  constructor (value) {
+    this._value = value;
   }
-  add () {
+  add (number) {
+    this._value += number;
+    return this;
   }
-  substract () {
+  substract (number) {
+    this._value -= number;
+    return this;
   }
-  multiply () {
+  multiply (number) {
+    this._value *= number;
+    return this;
   }
-  divide () {
+  divide (number) {
+    this._value /= number;
+    return this;
   }
-  square () {
+  square (number) {
+    this._value = Math.pow(this._value,number);
+    return this;
   }
-  squareRoot () {
+  squareRoot (number) {
+    this._value = Math.sqrt(this._value);
+    return this;
+  }
+  konstantaPi(){
+    this._value = Math.PI * this._value * this._value;
+    return this;
+  }
+  hasil(){
+    return this._value;
   }
 }
 
