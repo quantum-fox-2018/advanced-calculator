@@ -36,15 +36,16 @@ class Calculator {
     this.num1 = Math.sqrt(this.num1, 1/num2);
     return this;
   }
-  circleLength (diameter) {
-    let d = diameter;
-    this.num1 = this.pi * d;
+  circleLength () {
+    this.num1 *= this.pi;
     return this;
   }
-  circleArea (diameter) {
-    let d = diameter;
-    this.num1 = (d / 2) * this.pi;
+  circleArea () {
+    this.num1 = ((this.num1 / 2) * this.pi).toFixed(2);
     return this;
+  }
+  result () {
+    return this.num1;
   }
 }
 
