@@ -2,19 +2,54 @@
 
 class Calculator {
   //write your code here
-  constructor () {
+  constructor (param_num) {
+    this.num = param_num;
   }
-  add () {
+
+  add (num2) {
+    this.num = this.num + num2;
+    return this;
   }
-  substract () {
+
+  substract (num2) {
+    this.num = this.num - num2;
+    return this;
   }
-  multiply () {
+
+  multiply (num2) {
+    this.num = this.num * num2;
+    return this;
   }
-  divide () {
+
+  divide (num2) {
+    this.num = this.num / num2;
+    return this;
   }
-  square () {
+
+  square (num2) {
+    this.num = Math.pow(this.num, num2);
+    return this;
   }
+
   squareRoot () {
+    this.num = Math.sqrt(this.num);
+    return this;
+  }
+
+  circleWide () {
+    const pi = 3.14;
+    this.num = pi * this.square(2).printResult();
+    return this;
+  }
+
+  circleCircumference () {
+    const pi = 3.14;
+    this.num = 2 * pi * this.num;
+    return this;
+  }
+
+  printResult() {
+    return this.num;
   }
 }
 
