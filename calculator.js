@@ -2,19 +2,49 @@
 
 class Calculator {
   //write your code here
-  constructor () {
+  constructor (operand1) {
+    this.operand1 = operand1;
+    this.result = operand1;
   }
-  add () {
+  add (operand2) {
+    this.result = this.result + operand2;
+    return this
   }
-  substract () {
+  substract (operand2) {
+    this.result = this.result - operand2;
+    return this
   }
-  multiply () {
+  multiply (operand2) {
+    this.result = this.result * operand2;
+    return this
   }
-  divide () {
+  divide (operand2) {
+    this.result = this.result / operand2;
+    return this
   }
-  square () {
+  square (power) {
+
+    if(power>1){
+      this.result = this.result * this.operand1;
+      return this.square(power-1);
+    }
+    else{
+      return this
+    }
   }
-  squareRoot () {
+  squareRoot (power) {
+
+    this.result = Math.pow(this.operand1,power);
+    return this;
+  }
+
+  phi(){
+    this.result = this.result * (3.14);
+    return this;
+  }
+
+  printResult(){
+    return `${this.result}`
   }
 }
 
