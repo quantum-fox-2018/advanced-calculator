@@ -42,6 +42,17 @@ class Calculator {
     this.hasil = Math.sqrt(angka1,angka2)
     return this
   }
+  diameter (jari2){
+    this.jari2 = jari2
+    this.hasil = 2 * jari2
+    return this
+  }
+  kelilingLingkaran(jari2){
+    this.jari2 = jari2
+    this.hasil = 3.14 * (2*jari2)
+    return hasil
+  }
+
 }
 
 
