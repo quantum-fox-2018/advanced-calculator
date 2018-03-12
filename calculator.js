@@ -27,12 +27,22 @@ class Calculator {
   }
 
   square (num2) {
-    this.num = Math.pow(this.num, num2);
+    //this.num = Math.pow(this.num, num2);
+    for (let i = 1; i < num2; i++) {
+      this.num = this.num * this.num;
+    }
     return this;
   }
 
   squareRoot () {
-    this.num = Math.sqrt(this.num);
+    //this.num = Math.sqrt(this.num);
+    for (let i = 1; i < this.num; i++) {
+      for (let j = 1; j < this.num; j++) {
+        if (i === j && i*j === this.num) {
+          this.num = i;
+        }
+      }
+    }
     return this;
   }
 
