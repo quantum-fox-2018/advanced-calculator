@@ -2,19 +2,50 @@
 
 class Calculator {
   //write your code here
-  constructor () {
+  constructor (num) {
+    this.num1 = num;
+    this.pi = 3.14;
   }
-  add () {
+  add (addNum) {
+    let num2 = addNum;
+    this.num1 += num2;
+    return this;
   }
-  substract () {
+  substract (subNum) {
+    let num2 = subNum;
+    this.num1 -= num2;
+    return this;
   }
-  multiply () {
+  multiply (multNum) {
+    let num2 = multNum;
+    this.num1 *= num2;
+    return this;
   }
-  divide () {
+  divide (divNum) {
+    let num2 = divNum;
+    this.num1 /= num2;
+    return this;
   }
-  square () {
+  square (powNum) {
+    let num2 = powNum;
+    this.num1 = Math.pow(this.num1,num2);
+    return this;
   }
-  squareRoot () {
+  squareRoot (sqrNum) {
+    let num2 = sqrNum;
+    this.num1 = Math.sqrt(this.num1, 1/num2);
+    return this;
+  }
+  circleLength () {
+    this.num1 *= this.pi;
+    return this;
+  }
+  circleArea () {
+    this.num1 = ((this.num1 / 2) * this.pi).toFixed(2);
+    return this;
+  }
+  result () {
+    return this.num1;
   }
 }
 
