@@ -7,4 +7,4 @@ var calculator = new Calculator();
 
 console.log(calculator.initNumber(10).divide(3).equal());
 
-console.log(calculator.initNumber(2).square(3).equal());
+console.log(calculator.initNumber(2).add(3).equal());
