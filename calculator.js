@@ -36,8 +36,8 @@ class Calculator {
     return this;
   }
 
-  circle (num) {
-    this.hasil = 3.14 * (num * num);
+  circle () {
+    this.hasil = 3.14 * this.hasil;
 
     return this;
   }
@@ -54,8 +54,8 @@ class Calculator {
 var calculator = new Calculator(5)
 
 // console.log(calculator.add(4))
-console.log(calculator.add(6).substract(3).multiply(4))
-console.log(calculator.circle(5).add(5))
+console.log(calculator.add(6).substract(5).multiply(5))
+console.log(calculator.circle())
 
 module.exports = {
   Calculator
