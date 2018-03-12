@@ -2,32 +2,32 @@
 
 class Calculator {
   //write your code here
-  constructor (value) {
-    this.value = value
+  constructor (number) {
+    this.number = number
     return this
   }
-  add (value) {
-    this.value = this.value + value
+  add (number) {
+    this.number = this.number + number
     return this
   }
-  substract (value) {
-    this.value = this.value - value
+  substract (number) {
+    this.number = this.number - number
     return this
   }
-  multiply (value) {
-    this.value = this.value * value
+  multiply (number) {
+    this.number = this.number * number
     return this
   }
-  divide (value) {
-    this.value = this.value / value
+  divide (number) {
+    this.number = this.number / number
     return this
   }
-  square (value) {
-    this.value = Math.pow(this.value, value)
+  square (number) {
+    this.number = Math.pow(this.number, number)
     return this
   }
   squareRoot () {
-    this.value = Math.pow(this.value, 0.5)
+    this.number = Math.pow(this.number, 0.5)
     return this
   }
 }
@@ -43,3 +43,9 @@ class Calculator {
 module.exports = {
   Calculator
 }
+
+var calc = new Calculator(16)
+calc.squareRoot()
+console.log(calc.number);
+calc.squareRoot().square(5).add(10)
+console.log(calc.number);
