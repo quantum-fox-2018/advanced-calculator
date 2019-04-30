@@ -2,19 +2,33 @@
 
 class Calculator {
   //write your code here
-  constructor () {
+  constructor (number) {
+    this.number = number
+    return this
   }
-  add () {
+  add (number) {
+    this.number = this.number + number
+    return this
   }
-  substract () {
+  substract (number) {
+    this.number = this.number - number
+    return this
   }
-  multiply () {
+  multiply (number) {
+    this.number = this.number * number
+    return this
   }
-  divide () {
+  divide (number) {
+    this.number = this.number / number
+    return this
   }
-  square () {
+  square (number) {
+    this.number = Math.pow(this.number, number)
+    return this
   }
   squareRoot () {
+    this.number = Math.pow(this.number, 0.5)
+    return this
   }
 }
 
@@ -29,3 +43,9 @@ class Calculator {
 module.exports = {
   Calculator
 }
+
+var calc = new Calculator(16)
+calc.squareRoot()
+console.log(calc.number);
+calc.squareRoot().square(5).add(10)
+console.log(calc.number);
